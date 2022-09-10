@@ -1,4 +1,8 @@
 const productsInCart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+const toast = document.querySelector(".boton")
+const toast2 = document.querySelector(".boton2")
+const toast3 = document.querySelector(".boton3")
+const toast4 = document.querySelector(".boton4")
 
 let products = [];
 
@@ -183,3 +187,52 @@ const whatToRender = () => {
 };
 
 whatToRender();
+
+
+toast.addEventListener("click", () => {
+
+    Toastify({
+      text: "Su mensaje fue enviado con exito!",
+      className: "boton",
+      duration: 2500,
+      style: {
+        background: "linear-gradient(to right, #42ab49, #77dd77)",
+      }
+      }).showToast();
+  })
+
+toast2.addEventListener("click", () => {
+
+    Toastify({
+      text: "Contactate a nuestro mail!",
+      className: "boton",
+      duration: 2000,
+      style: {
+        background: "linear-gradient(to right, #42ab49, #77dd77)",
+      }
+      }).showToast();
+  })
+
+toast3.addEventListener("click", () => {
+
+    Toastify({
+      text: "Contactate a nuestro número!",
+      className: "boton",
+      duration: 2000,
+      style: {
+        background: "linear-gradient(to right, #42ab49, #77dd77)",
+      }
+      }).showToast();
+  })
+
+toast4.addEventListener("click", () => {
+
+    Toastify({
+      text: "Visita nuestro sitio web!",
+      className: "boton",
+      duration: 2000,
+      style: {
+        background: "linear-gradient(to right, #42ab49, #77dd77)",
+      }
+      }).showToast();
+  })
