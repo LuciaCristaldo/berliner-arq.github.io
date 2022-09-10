@@ -14,12 +14,10 @@ function dbProducts() {
     $.ajax({
         url: "../database.json",
         success: function (response) {
-            console.log(response);
             products = response;
             whatToRender();
         }, error: function (error) {
-            console.log(error);
-        }
+             }
     });
 }
 
